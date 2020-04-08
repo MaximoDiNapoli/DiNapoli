@@ -1,0 +1,69 @@
+Preguntas sobre conceptos téoricos y  ejercicios prácticos:
+
+1. ¿Qué es una clase?
+ Donde guardo los atributos y metodos de mi objeto
+2. ¿Qué es un objeto?
+ con mi clase puedo crear muchos objetos que seria algo asi como "cosas" que comparten las mismas caracteristicas entre si
+3. ¿Qué es el estado de un objeto?
+ Los atributos y sus valores en un momento dado, determinan el estado de un objeto.
+4. ¿Cuántos objetos se pueden crear de una clase?
+ infinitos
+5. ¿Qué son los atributos de una clase? ¿Qué representan?
+ son las variables y representan el estado de un/ objeto
+6. ¿Qué son los métodos de una clase? ¿Qué representan?
+ Funciones para interactuar con los objetos
+7. ¿Qué es un constructor?
+Un constructor es un método de una clase que se llama automáticamente siempre que se declara un objeto.Su función es inicializar el objeto y sirve para asegurarnos que los objetos siempre contengan valores válidos.
+8. ¿Una clase puede tener más de un constructor?
+ nose 
+9. ¿Qué significa "this"?
+ nose
+10. ¿Qué debe suceder para que dos objetos sean considerados iguales?
+ deben tener los mismos valores en sus atibutos
+11. ¿Qué retorna el operador "new" en Java?
+ nose
+12. Si ejecuto lo siguiente que está escrito dentro del método main,
+
+```java
+Persona p1 = new Persona();
+Persona p2 = new Persona();
+
+System.out.println(p1 == p2);
+```
+¿Qué se imprime por consola? 
+nose
+
+13. ¿Para qué sirve "package"? 
+ nose
+14. ¿Para qué utilizamos la clase Scanner?
+ para que el usuario pueda ingresar datos en una variable
+15. ¿Qué es ArrayList?
+ un array que puede variar su tamaño a medida que sacamos o ponemos datos dentro
+16. ¿Para qué sirve la palabra reservada "import"?
+ para importar una libreria
+ 
+
+
+Modalidad de trabajo a distancia:
+
+17. ¿Los apuntes te resultan fáciles de comprender?
+ si
+18. ¿La cantidad de ejemplos te parece suficiente?
+ sisi quiza yo agregaria algun que otro // para explicar que esta pasando en cada parte del ejemplo pero estan bien
+
+19. ¿Usás la IDE o la consola para compilar y ejecutar los programas realizados?
+ si
+
+20. En caso de que use la IDE, ¿Tuviste alguna dificultad para manejar la IDE de la materia?
+ sinseramente no entendi en clase como se usaba pero nada que una busqueda de 3 min en google no pueda arreglar
+
+21. En caso de que no uses la IDE, ¿Porqué ha decidido no utilizarla?
+
+22.¿Cuál es el método de evaluación que te resulta más cómodo?
+ yo diria que lo ideal seria tomar pruebas teoricas y practicas individuales, no soy gran fan de los trabajos grupales almenos no como metodo de evaluacion aunque estaria bueno tener alguno a lo largo del año
+
+23. ¿Qué te gustaría agregar o mejorar para aprender esta materia?
+ me encantaria hacer clases online en teams ya que la plataforma te permite grabar la clase y verla mas tarde yo creo que una clase asi explicando los temas sirve mas que enviarnos apuntes.
+
+
+

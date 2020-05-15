@@ -8,6 +8,17 @@ public class Habitacion {
     private int Ganancias;
     private ArrayList<Huesped> clientes = new ArrayList<>();
     private int ID;
+    
+    /*
+    las inicializaciones de los atributos sólo deben estar
+    dentro de los constructores
+
+    los nombres de los atributos están conformados por una sola
+    * palabra, la misma debe estar escrita sólo en minúsculas;
+    * si están conformados por más una palabra, sólo la primera
+    * debe empezar con minúscula, las demás deben comenzar con 
+    * mayúsculas
+     */
 
     public Habitacion(int capacity, int precius, int fecha1, int fecha2, Huesped clientus, int idus){
         capacidad = capacity;

@@ -218,4 +218,21 @@ public class Main {
             }
         }
     }
+    
+     /*
+
+    Hola, DiNapoli!
+
+    Bien por el trabajo realizado!
+
+    Recordar:
+
+    - a la hora de entregar todos los trabajos deben compilar
+    - los métodos deben tener nombres donde sólo la primer palabra
+      puede comenzar con minúscula. Luego, las demás palabras deben
+      comenzar con mayúscula.
+    - Tener cuidado con llamar a métodos que no están definidos.
+    - Aplicar el concepto de alta cohesión en los métodos.
+    - los nombres de las variables deben ser declarativas
+     */
 }

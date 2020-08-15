@@ -19,7 +19,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static String verQueTipoDeAnimalTuvoMejorAtencionYearActual(Perro Agus, Gato Hongui, Tortuga Pancha){
+    public static String verQueTipoDeAnimalTuvoMejorAtencionYearActual(ArrayList<Perro> perros, ArrayList<Gato> gatos, ArrayList<Tortuga> tortugas) {
         SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
         int visitasPerros = 0;
         int visitasGatos = 0;
@@ -27,36 +27,71 @@ public class Main {
         Date inicioYear = new Date();
         try {
             inicioYear = ft.parse("2020-00-00");
-        }
-        catch (ParseException e){
+        } catch (ParseException e) {
             e.printStackTrace();
         }
-        for (int i = 0; i < Agus.getFechasAtencion().size(); i++){
-            if(Agus.getFechasAtencion().get(i).after(inicioYear)){
-                visitasPerros = visitasPerros + 1;
+        for (int j = 0; j < perros.size(); j++) {
+            for (int i = 0; perros.get(j).getFechasAtencion().size() > j; j++) {
+                if (perros.get(i).getFechasAtencion().get(i).after(inicioYear)) {
+                    visitasPerros = visitasPerros + 1;
+                }
+            }
+
+        }
+        if (gatos.size() > 1) {
+            for (int j = 0; j < gatos.size(); j++) {
+                for (int i = 0; gatos.get(j).getFechasAtencion().size() > j; j++) {
+                    if (gatos.get(i).getFechasAtencion().get(i).after(inicioYear)) {
+                        visitasGatos = visitasGatos + 1;
+                    }
+                }
+
             }
         }
-        for (int i = 0; i < Hongui.getFechasAtencion().size(); i++){
-            if(Hongui.getFechasAtencion().get(i).after(inicioYear)){
-                visitasGatos = visitasGatos + 1;
+        else {
+            for (int j = 0; j < gatos.size(); j++) {
+                if (gatos.get(j).getFechasAtencion().get(j).after(inicioYear)) {
+                    visitasGatos = visitasGatos + 1;
+                }
             }
         }
-        for (int i = 0; i < Pancha.getFechasAtencion().size(); i++){
-            if(Pancha.getFechasAtencion().get(i).after(inicioYear)){
-                visitasTortugas = visitasTortugas + 1;
+        if (tortugas.size() > 1) {
+            for (int j = 0; j < tortugas.size(); j++) {
+                for (int i = 0; tortugas.get(j).getFechasAtencion().size() > j; j++) {
+                    if (tortugas.get(i).getFechasAtencion().get(i).after(inicioYear)) {
+                        visitasTortugas = visitasTortugas + 1;
+                    }
+                }
+
             }
         }
-        if(visitasPerros > visitasGatos && visitasPerros > visitasTortugas){
-            return  "Perro";
+        else {
+            for (int j = 0; j < tortugas.size(); j++) {
+                if (tortugas.get(j).getFechasAtencion().get(j).after(inicioYear)) {
+                    visitasTortugas = visitasTortugas + 1;
+                }
+            }
         }
-        if(visitasGatos > visitasPerros && visitasGatos > visitasTortugas){
-            return  "Gato";
+        /*for (int j = 0; j < tortugas.size(); j++) {
+            for (int i = 0; tortugas.get(j).getFechasAtencion().size() > j; j++) {
+                if (tortugas.get(i).getFechasAtencion().get(i).after(inicioYear)) {
+                    visitasTortugas = visitasTortugas + 1;
+                    }
+                }
+            }*/
+
+        if (visitasPerros > visitasGatos && visitasPerros > visitasTortugas) {
+            return "La raza que mas fue atendida este año fue:  Perro";
         }
-        if(visitasTortugas > visitasPerros && visitasGatos < visitasTortugas){
-            return "Tortugas";
+        if (visitasGatos > visitasPerros && visitasGatos > visitasTortugas) {
+            return "La raza que mas fue atendida este año fue:  Gato";
         }
-        return "empate";
+        if (visitasTortugas > visitasPerros && visitasGatos < visitasTortugas) {
+            return "La raza que mas fue atendida este año fue:  Tortugas";
+        }
+        return "Empate";
     }
+
     public static void verVisitasYearActualPorRaza(ArrayList<Perro> perros){
         SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
         int dea = 0;
@@ -173,6 +208,8 @@ public class Main {
         ArrayList<Date> fechasAtencionHongui = new ArrayList<>();
         ArrayList<Date> fechasAtencionPancha = new ArrayList<>();
         ArrayList<Perro> perros = new ArrayList<>();
+        ArrayList<Gato> gatos = new ArrayList<>();
+        ArrayList<Tortuga> tortugas = new ArrayList<>();
         SimpleDateFormat ft = new SimpleDateFormat("yyyy-MM-dd");
         Date fechaNacimientoAgus = new Date();
         Date fechaNacimientoChicho = new Date();
@@ -218,6 +255,9 @@ public class Main {
         Tortuga pancha = new Tortuga("pancha", fechaNacimientoPancha, 3, fechasAtencionPancha, true);
         perros.add(agus);
         perros.add(chicho);
+        gatos.add(hongui);
+        tortugas.add(pancha);
+
         System.out.println("Que animal es? " +
                 "1:Perro      " +
                 "2:Gato       " +
@@ -228,7 +268,7 @@ public class Main {
         verVisitasYearActual(animalDesignado, opcion);
         verVisitasDesdeQueNacio(animalDesignado, opcion);
         verVisitasYearActualPorRaza(perros);
-        System.out.println(verQueTipoDeAnimalTuvoMejorAtencionYearActual(agus, hongui, pancha));
+        System.out.println(verQueTipoDeAnimalTuvoMejorAtencionYearActual(perros, gatos, tortugas));
     }
 
 }
